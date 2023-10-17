@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container from '@mui/material/Container';
+import Filter from './components/Filter';
+import { useContext, useEffect } from 'react';
+import ProductList from './components/ProductList';
+import { MainContext } from './contexts/MainContext';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App:React.FC = () => {
+
+    const {
+        productList,
+        getProductProperties, handleFilterProductList,
+        selectedProperty, selectedOperator, searchValue
+        // eslint-disable-next-line
+    } = useContext(MainContext);
+
+    useEffect(()=>{
+        getProductProperties(productList[0])
+        // eslint-disable-next-line
+    },[])
+
+    useEffect(()=>{
+        handleFilterProductList()
+        // eslint-disable-next-line
+    },[selectedProperty, selectedOperator, searchValue])
+    return(
+        <Container maxWidth="lg" sx={{ padding:"30px" }}>
+            <Filter />
+            <ProductList/>
+        </Container>
+    )
 }
 
 export default App;
