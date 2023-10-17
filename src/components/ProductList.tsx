@@ -30,6 +30,7 @@ const ProductList: React.FC = () => {
                                             width:"150px"
                                         }}
                                     />
+                                    <span>Id : {product.id}</span>
                                     <span>Title : {product.title}</span>
                                     <span>Price : {product.price}€</span>
                                     <span>Category : {product.category}</span>
