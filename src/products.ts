@@ -8,7 +8,7 @@ const products:IProductProps[] = [
         "price": "48.77",
         "imgLink": "https://cdn.shopify.com/s/files/1/0722/7578/8085/products/house-moto-dainese-explorer-noir-rouge-387867.jpg?v=1695223440",
         "available": true,
-        "categoryId": "[\"gid://shopify/Collection/483494592821\"]"
+        "categoryId": "[\"gid://shopify/Collection/483494592821\"]",
     },
     {
         "id": "8707084419381",

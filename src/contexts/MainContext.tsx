@@ -49,7 +49,6 @@ const MainContextProvider: React.FC<IMainContextProviderProps> = ({ children }) 
     const handleFilterProductList = () => {
         let list: IProductProps[] = [];
         if(selectedProperty && selectedOperator && searchValue){
-            console.log(selectedProperty, selectedOperator, searchValue);
             list = productList.filter((product: IProductProps) => {
                 const property = product[selectedProperty as keyof IProductProps];
                 
