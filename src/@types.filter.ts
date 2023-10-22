@@ -21,12 +21,8 @@ export interface IOperatorProps {
  * IMainContextProps
  */
 export interface IMainContextProps {
-    productList: IProductProps[];
-    setProductList: Dispatch<SetStateAction<IProductProps[]>>;
     searchValue: string;
     setSearchValue: Dispatch<SetStateAction<string>>;
-    filteredList: IProductProps[];
-    setFilteredList: Dispatch<SetStateAction<IProductProps[]>>;
     operatorList: IOperatorProps[];
     propertyList: string[];
     setPropertyList: Dispatch<SetStateAction<string[]>>;
@@ -34,9 +30,7 @@ export interface IMainContextProps {
     setSelectedProperty: Dispatch<SetStateAction<string>>;
     selectedOperator: string;
     setSelectedOperator: Dispatch<SetStateAction<string>>;
-    handleFilterProductList: () => void;
     handleChangeProperty: (event: SelectChangeEvent, selectNum: number) => void;
-    getProductProperties: (product: IProductProps) => void;
 };
 
 export interface IMainContextProviderProps {
